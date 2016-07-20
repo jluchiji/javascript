@@ -102,7 +102,10 @@ module.exports = {
      *  this option sets a specific tab width for your code
      *  http://eslint.org/docs/rules/indent
      */
-    indent: [ 2, 2 ],
+    indent: [ 2, 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1
+    } ],
 
 
     /**
