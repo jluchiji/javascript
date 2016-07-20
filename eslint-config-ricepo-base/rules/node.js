@@ -16,7 +16,7 @@ module.exports = {
      *  require all requires be top-level
      *  http://eslint.org/docs/rules/global-require
      */
-    'global-require': 2,
+    'global-require': 0,
 
 
     /**

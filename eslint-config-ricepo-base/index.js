@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: [
     './rules/best-practices',
     './rules/errors',
@@ -7,10 +8,7 @@ module.exports = {
     './rules/variables',
     './rules/es2016'
   ].map(require.resolve),
-  parserOptions: {
-    ecmaVersion: 7,
-    sourceType: 'module'
-  },
+  parser: 'babel-eslint',
   rules: {
     strict: 2
   }

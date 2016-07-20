@@ -6,9 +6,7 @@ module.exports = {
      *  enforce spacing inside array brackets
      */
     'array-bracket-spacing': [ 2, 'always', {
-      exceptions: {
-        singleValue: false
-      }
+      singleValue: false
     } ],
 
 
@@ -71,7 +69,7 @@ module.exports = {
     /**
      *  require function expressions to have a name
      */
-    'func-names': 1,
+    'func-names': 0,
 
 
     /**
@@ -108,7 +106,7 @@ module.exports = {
       SwitchCase: 1,
       VariableDeclarator: 1,
       outerIIFEBody: 1
-    }],
+    } ],
 
 
     /**
@@ -191,7 +189,7 @@ module.exports = {
     /**
      *  specify the maximum depth callbacks can be nested
      */
-    'max-nested-callbacks': 4,
+    'max-nested-callbacks': 2,
 
 
     /**
@@ -218,9 +216,7 @@ module.exports = {
     /**
      *  require a capital letter for constructors
      */
-    'new-cap': [1, {
-      newIsCap: true
-    }],
+    'new-cap': 0,
 
 
     /**
@@ -374,8 +370,9 @@ module.exports = {
 
     /**
      *  disallow dangling underscores in identifiers
+     *  Disabling due to MongoDB ObjectId()
      */
-    'no-underscore-dangle': [2, {
+    'no-underscore-dangle': [0, {
       allowAfterThis: false
     }],
 

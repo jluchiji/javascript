@@ -45,11 +45,16 @@ module.exports = {
     /**
      *  enforce the spacing around the * in generator functions
      *  http://eslint.org/docs/rules/generator-star-spacing
+     *
+     * NOTE Disabled because of: https://github.com/eslint/eslint/issues/6274
      */
-    'generator-star-spacing': [ 2, {
+    'generator-star-spacing': 0,
+    /*
+    'babel/generator-star-spacing': [ 2, {
       before: false,
       after: true
     } ],
+    */
 
 
     /**
@@ -200,7 +205,7 @@ module.exports = {
      *  disallow generator functions that do not have yield
      *  http://eslint.org/docs/rules/require-yield
      */
-    'require-yield': 2,
+    'require-yield': 0,
 
 
     /**

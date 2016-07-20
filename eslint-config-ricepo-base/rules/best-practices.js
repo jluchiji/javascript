@@ -242,12 +242,7 @@ module.exports = {
     /**
      *  disallow use of multiple spaces
      */
-    'no-multi-spaces': [ 2, {
-      exceptions: {
-        VariableDeclarator: true,
-        ImportDeclaration: true
-      }
-    } ],
+    'no-multi-spaces': 0,
 
 
     /**

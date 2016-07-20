@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/ricepo/javascript/issues"
   },
-  "homepage": "https://github.com/ricepo/javascript#readme"
+  "homepage": "https://github.com/ricepo/javascript#readme",
+  "dependencies": {
+  }
 }
