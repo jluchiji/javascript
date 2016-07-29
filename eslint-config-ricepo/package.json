@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ricepo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ESLint rules for Ricepo",
   "main": "index.js",
   "scripts": {

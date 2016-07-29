@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ricepo-base",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Ricepo JavaScript styleguide",
   "main": "index.js",
   "scripts": {
