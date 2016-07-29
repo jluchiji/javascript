@@ -232,7 +232,7 @@ module.exports = {
      * Require ES6 class declarations over React.createClass
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
      */
-    'react/prefer-es6-class': [2, 'always'],
+    'react/prefer-es6-class': [1, 'always'],
 
     /**
      * Require stateless functions when not using lifecycle methods, setState or ref
@@ -285,7 +285,7 @@ module.exports = {
      * Enforce component methods order
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
      */
-    'react/sort-comp': 0,
+    'react/sort-comp': 1,
 
     /**
      * Prevent missing parentheses around multilines JSX
