@@ -292,7 +292,7 @@ module.exports = {
         ['&&', '||'],
         ['in', 'instanceof']
       ],
-      allowSamePrecedence: false
+      allowSamePrecedence: true
     }],
 
 
