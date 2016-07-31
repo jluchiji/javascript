@@ -7,7 +7,8 @@ module.exports = {
     './rules/style',
     './rules/variables',
     './rules/es2016',
-    './rules/imports'
+    './rules/imports',
+    './rules/lodash'
   ].map(require.resolve),
   parser: 'babel-eslint',
   rules: {
