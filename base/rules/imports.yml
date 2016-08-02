@@ -159,7 +159,7 @@ rules:
 
 parserOptions:
   sourceType: module
-  ecmaVersion: 6
+  ecmaVersion: 7
 
 
 settings:
