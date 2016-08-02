@@ -1,0 +1,13 @@
+#
+# overrides.yml
+#
+# @author  Denis Luchkin-Zhou <denis@ricepo.com>
+# @license 2015-16 (C) Ricepo LLC. All Rights Reserved.
+#
+---
+rules:
+
+    #
+    # This override is specifically here for the 'styles' use case in React
+    #
+    no-use-before-define: off
