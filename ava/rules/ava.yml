@@ -1,0 +1,168 @@
+#
+# ava.yml
+#
+# @author  Denis Luchkin-Zhou <denis@ricepo.com>
+# @license 2015-16 (C) Ricepo LLC. All Rights Reserved.
+#
+---
+env:
+  es6: true
+
+
+plugins:
+  - ava
+
+
+rules:
+
+
+    #
+    # Check for the correct number of arguments passed to assertion methods
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/assertion-arguments.md
+    #
+    ava/assertion-arguments: error
+
+
+    #
+    # Enforce assertion messages
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/assertion-message.md
+    #
+    ava/assertion-message:
+      - off
+      - always
+
+
+    #
+    # Enforce maximum assertions per test
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/max-asserts.md
+    #
+    ava/max-asserts:
+      - off
+      - 5
+
+
+    #
+    # Disallow tests utilizing callbacks
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-cb-test.md
+    #
+    ava/no-cb-test: off,
+
+
+    #
+    # Disallow duplicate test titles within the same file
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-identical-title.md
+    #
+    ava/no-identical-title: error
+
+
+    #
+    # Disallow test cases in ignored files
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-ignored-test-files.md
+    #
+    ava/no-ignored-test-files: error,
+
+
+    #
+    # Disallow t.end() unless it is in test.cb()
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-invalid-end.md
+    #
+    ava/no-invalid-end: error,
+
+
+    #
+    # Disallow test.only()
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-only-test.md
+    #
+    ava/no-only-test: error,
+
+
+    #
+    # Disallow t.skip
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-skip-assert.md
+    #
+    ava/no-skip-assert: error,
+
+
+    #
+    # Disallow test.skip
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-skip-test.md
+    #
+    ava/no-skip-test: error,
+
+
+    #
+    # Disallow statements after t.end() is called
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-statement-after-end.md
+    #
+    ava/no-statement-after-end: error,
+
+
+    #
+    # Disallow test.todo
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-todo-test.md
+    #
+    ava/no-todo-test: warn,
+
+
+    #
+    # Disallow unknown test modifiers
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-unknown-modifiers.md
+    #
+    ava/no-unknown-modifiers: error,
+
+
+    #
+    # Prefer power-assert whenever possible
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/prefer-power-assert.md
+    #
+    ava/prefer-power-assert: off,
+
+
+    #
+    # Check that t.end() is called for every test.cb()
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/test-ended.md
+    #
+    ava/test-ended: error,
+
+
+    #
+    # Require test titles if multiple tests in the same file
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/test-title.md
+    #
+    ava/test-title:
+      - error,
+      - if-multiple
+
+
+    #
+    # Make sure t is used correctly
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-t-well.md
+    #
+    ava/use-t-well: error,
+
+
+    #
+    # Make sure test functions use t as their parameter
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-t.md
+    #
+    ava/use-t: error,
+
+
+    #
+    # Make sure ava is imported as test
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-test.md
+    #
+    ava/use-test: error,
+
+
+    #
+    # Prefer t.true()/t.false() over t.truthy()/t.falsy()
+    # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-true-false.md
+    #
+    ava/use-true-false: off
+
+
+
+parserOptions:
+  sourceType: module
+  ecmaVersion: 7
