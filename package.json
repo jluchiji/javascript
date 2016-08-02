@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ricepo",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "ESLint rules for Ricepo",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,8 @@
     "url": "https://github.com/ricepo/javascript/issues"
   },
   "homepage": "https://github.com/ricepo/javascript#readme",
-  "dependencies": { },
+  "dependencies": {},
   "peerDependencies": {
-    "eslint": "^3.1.1",
     "eslint": "^3.1.1",
     "eslint-plugin-lodash": "^1.10.1",
     "eslint-plugin-react": "^5.1.1",
