@@ -45,7 +45,7 @@ rules:
     # Disallow tests utilizing callbacks
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-cb-test.md
     #
-    ava/no-cb-test: off,
+    ava/no-cb-test: off
 
 
     #
@@ -59,70 +59,70 @@ rules:
     # Disallow test cases in ignored files
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-ignored-test-files.md
     #
-    ava/no-ignored-test-files: error,
+    ava/no-ignored-test-files: error
 
 
     #
     # Disallow t.end() unless it is in test.cb()
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-invalid-end.md
     #
-    ava/no-invalid-end: error,
+    ava/no-invalid-end: error
 
 
     #
     # Disallow test.only()
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-only-test.md
     #
-    ava/no-only-test: error,
+    ava/no-only-test: error
 
 
     #
     # Disallow t.skip
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-skip-assert.md
     #
-    ava/no-skip-assert: error,
+    ava/no-skip-assert: error
 
 
     #
     # Disallow test.skip
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-skip-test.md
     #
-    ava/no-skip-test: error,
+    ava/no-skip-test: error
 
 
     #
     # Disallow statements after t.end() is called
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-statement-after-end.md
     #
-    ava/no-statement-after-end: error,
+    ava/no-statement-after-end: error
 
 
     #
     # Disallow test.todo
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-todo-test.md
     #
-    ava/no-todo-test: warn,
+    ava/no-todo-test: warn
 
 
     #
     # Disallow unknown test modifiers
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/no-unknown-modifiers.md
     #
-    ava/no-unknown-modifiers: error,
+    ava/no-unknown-modifiers: error
 
 
     #
     # Prefer power-assert whenever possible
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/prefer-power-assert.md
     #
-    ava/prefer-power-assert: off,
+    ava/prefer-power-assert: off
 
 
     #
     # Check that t.end() is called for every test.cb()
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/test-ended.md
     #
-    ava/test-ended: error,
+    ava/test-ended: error
 
 
     #
@@ -130,7 +130,7 @@ rules:
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/test-title.md
     #
     ava/test-title:
-      - error,
+      - error
       - if-multiple
 
 
@@ -138,21 +138,21 @@ rules:
     # Make sure t is used correctly
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-t-well.md
     #
-    ava/use-t-well: error,
+    ava/use-t-well: error
 
 
     #
     # Make sure test functions use t as their parameter
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-t.md
     #
-    ava/use-t: error,
+    ava/use-t: error
 
 
     #
     # Make sure ava is imported as test
     # https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/use-test.md
     #
-    ava/use-test: error,
+    ava/use-test: error
 
 
     #
