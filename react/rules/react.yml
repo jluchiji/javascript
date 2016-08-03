@@ -190,10 +190,7 @@ rules:
     # Prevent React to be incorrectly marked as unused
     # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
     #
-    react/jsx-uses-react:
-      - error
-      -
-        pragma: React
+    react/jsx-uses-react: error
 
 
     #
@@ -214,10 +211,7 @@ rules:
     # Prevent usage of deprecated methods
     # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
     #
-    react/no-deprecated:
-      - warn
-      -
-        react: 0.14.0
+    react/no-deprecated: warn
 
 
     #
@@ -226,7 +220,7 @@ rules:
     #
     react/no-did-mount-set-state:
       - error
-      - allow-in-func
+      - disallow-in-func
 
 
     #
@@ -235,7 +229,7 @@ rules:
     #
     react/no-did-update-set-state:
       - error
-      - allow-in-func
+      - disallow-in-func
 
 
     #
@@ -362,7 +356,7 @@ rules:
     # Prevent missing parentheses around multilines JSX
     # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
     #
-    react/wrap-multilines:
+    react/jsx-wrap-multilines:
       - error
       -
         declaration: true
@@ -414,4 +408,4 @@ settings:
         - .json
   react:
     pragma: React
-    version: 0.14.0
+    version: 15.3.0
