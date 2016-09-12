@@ -76,7 +76,7 @@ rules:
       - warn
       -
         vars: local
-        args: after-used
+        args: none
 
 
     #
