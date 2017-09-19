@@ -19,6 +19,25 @@ rules:
 
 
     #
+    #  enforce line breaks after opening and before closing array brackets
+    #
+    array-bracket-newline:
+      - error
+      -
+        multiline: true
+        minItems:  4
+
+
+    #
+    #  enforce line breaks between array elements
+    #
+    array-element-newline:
+      - error
+      -
+        multiline: true
+
+
+    #
     #  enforce spacing inside single-line blocks
     #  http://eslint.org/docs/rules/block-spacing
     #
@@ -43,7 +62,21 @@ rules:
     camelcase:
       - error
       -
-        properties: never
+        properties: always
+
+
+    #
+    #  enforce or disallow capitalization of the first letter of a comment
+    #
+    capitalized-comments: off
+
+
+    #
+    #  require trailing commas in multiline object literals
+    #
+    comma-dangle:
+      - error
+      - never
 
 
     #
@@ -85,6 +118,20 @@ rules:
 
 
     #
+    #  require or disallow spacing between function identifiers and their invocations
+    #
+    func-call-spacing:
+      - error
+      - never
+
+
+    #
+    #  require function names to match the name of the variable or property to which they are assigned
+    #
+    func-name-matching: off
+
+
+    #
     #  require function expressions to have a name
     #
     func-names: off
@@ -93,7 +140,19 @@ rules:
     #
     #  enforces use of function declarations or expressions
     #
-    func-style: off
+    func-style:
+      - error
+      - declaration
+      -
+        allowArrowFunctions: true
+
+
+    #
+    #  enforce consistent line breaks inside function parentheses
+    #
+    function-paren-newline:
+      - error
+      - consistent
 
 
     #
@@ -144,8 +203,9 @@ rules:
       - error
       -
         beforeColon: false
-        afterColon: true
-        mode: minimum
+        afterColon:  true
+        mode:        minimum
+        align:       value
 
 
     #
@@ -164,6 +224,14 @@ rules:
           case:
             after: true
 
+    #
+    #  enforce position of line comments to be beside only
+    #
+    line-comment-position:
+      - error
+      -
+        position: beside
+
 
     #
     #  disallow mixed LF and CRLF as linebreaks
@@ -177,14 +245,19 @@ rules:
     #
     #  enforces empty lines around comments
     #
-    lines-around-comment: off
+    lines-around-comment:
+       - error
+       -
+         beforeBlockComment: true
+         beforeLineComment:  true
+
 
 
     #
     #  specify the maximum depth that blocks can be nested
     #
     max-depth:
-      - off
+      - error
       - 4
 
 
@@ -197,8 +270,11 @@ rules:
       - 100
       - 2
       -
-        ignoreUrls: true
-        ignoreComments: false
+        ignoreComments:         false
+        ignoreUrls:             true
+        ignoreStrings:          true
+        ignoreTemplateLiterals: true
+        ignoreRegExpLiterals:   true
 
 
     #
@@ -216,7 +292,9 @@ rules:
     #
     #  specify the maximum depth callbacks can be nested
     #
-    max-nested-callbacks: error
+    max-nested-callbacks:
+      - error
+      - 3
 
 
     #
@@ -240,9 +318,17 @@ rules:
     #  http://eslint.org/docs/rules/max-statements-per-line
     #
     max-statements-per-line:
-      - off
+      - error
       -
-        max: 4
+        max: 2
+
+
+    #
+    #  Enforce or disallow newlines between operands of ternary expressions
+    #
+    multiline-ternary:
+      - error
+      - always-multiline
 
 
     #
@@ -256,18 +342,6 @@ rules:
     #  http://eslint.org/docs/rules/new-parens
     #
     new-parens: error
-
-
-    #
-    #  allow/disallow an empty newline after var statement
-    #
-    newline-after-var: off
-
-
-    #
-    #  http://eslint.org/docs/rules/newline-before-return
-    #
-    newline-before-return: off
 
 
     #
@@ -370,12 +444,18 @@ rules:
 
 
     #
+    #  Disallow Use of Chained Assignment Expressions
+    #
+    no-multi-assign: error
+
+
+    #
     #  disallow multiple empty lines and only one newline at the end
     #
     no-multiple-empty-lines:
       - error
       -
-        max: 4
+        max: 3
         maxEOF: 1
 
 
@@ -417,9 +497,9 @@ rules:
 
 
     #
-    #  disallow space between function identifier and application
+    #  disallow all tabs
     #
-    no-spaced-func: error
+    no-tabs: error
 
 
     #
@@ -463,29 +543,29 @@ rules:
 
 
     #
-    #  require padding inside curly braces
+    #  enforce the location of single-line statements
     #
-    object-curly-spacing:
+    nonblock-statement-body-position:
       - error
-      - always
+      - beside
 
 
     #
     #  enforce line breaks between braces
     #  http://eslint.org/docs/rules/object-curly-newline
     #
-    #
-    #  TODO: enable once https://github.com/eslint/eslint/issues/6488 is resolved
-    #
     object-curly-newline:
-      - off
+      - error
       -
-        ObjectExpression:
-          minProperties: 0
-          multiline: true
-        ObjectPattern:
-          minProperties: 0
-          multiline: true
+        multiline: true
+
+
+    #
+    #  require padding inside curly braces
+    #
+    object-curly-spacing:
+      - error
+      - always
 
 
     #
@@ -527,15 +607,95 @@ rules:
     #
     #  enforce operators to be placed before or after line breaks
     #
-    operator-linebreak: off
+    operator-linebreak:
+      - error
+      - after
 
 
     #
     #  enforce padding within blocks
     #
     padded-blocks:
-      - off
-      - never
+      - error
+      -
+        classes: always
+
+
+    #
+    #  Require or disallow padding lines between statements
+    #
+    padding-line-between-statements:
+      - error
+
+      # line before [return block]
+      -
+        blankLine: always
+        prev:      '*'
+        next:
+          -        return
+          -        block-like
+
+      # line after [return block]
+      -
+        blankLine: always
+        prev:
+          -        return
+          -        block-like
+        next:      '*'
+
+      # line before / after [const let var]
+      -
+        blankLine: always
+        prev:      '*'
+        next:
+          -        const
+          -        let
+          -        var
+      -
+        blankLine: always
+        prev:
+          -        const
+          -        let
+          -        var
+        next:      '*'
+      -
+        blankLine: any
+        prev:
+          -        const
+          -        let
+          -        var
+        next:
+          -        const
+          -        let
+          -        var
+
+      # line before / after expression
+      -
+        blankLine: always
+        prev:      '*'
+        next:      expression
+      -
+        blankLine: always
+        prev:      expression
+        next:      '*'
+      -
+        blankLine: any
+        prev:      expression
+        next:      expression
+
+      # line before / after directive
+      -
+        blankLine: always
+        prev:      '*'
+        next:      directive
+      -
+        blankLine: always
+        prev:      directive
+        next:      '*'
+      -
+        blankLine: any
+        prev:      directive
+        next:      directive
 
 
     #
@@ -584,6 +744,20 @@ rules:
       -
         before: false
         after: true
+
+
+    #
+    #  enforce location of semicolons
+    #
+    semi-style:
+      - error
+      - last
+
+
+    #
+    #  require object keys to be sorted
+    #
+    sort-keys: off
 
 
     #
@@ -646,6 +820,17 @@ rules:
         markers:
           - "="
           - "!"
+
+    #
+    #  enforce spacing around colons of switch statements
+    #
+    switch-colon-spacing: off
+
+
+    #
+    #  Require or disallow spacing between template tags and their literals
+    #
+    template-tag-spacing: off
 
 
     #

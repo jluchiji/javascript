@@ -9,14 +9,6 @@ rules:
 
 
     #
-    #  require trailing commas in multiline object literals
-    #
-    comma-dangle:
-      - warn
-      - never
-
-
-    #
     #  disallow assignment in conditional expressions
     #
     no-cond-assign:
