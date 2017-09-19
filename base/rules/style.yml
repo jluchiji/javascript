@@ -725,7 +725,15 @@ rules:
     #  do not require jsdoc
     #  http://eslint.org/docs/rules/require-jsdoc
     #
-    require-jsdoc: off
+    require-jsdoc:
+      - error
+      -
+        require:
+          FunctionDeclaration:     true
+          MethodDefinition:        true
+          ArrowFunctionExpression: true
+          ClassDeclaration:        false
+
 
 
     #
