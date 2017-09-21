@@ -15,4 +15,4 @@ rules:
     #
     # Prefer await to then() for reading Promise values
     #
-    promise/prefer-await-to-then: error
+    promise/prefer-await-to-then: warn
