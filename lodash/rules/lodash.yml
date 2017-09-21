@@ -63,6 +63,15 @@ rules:
 
 
     #
+    # Prefer a either a Lodash chain or nested Lodash calls
+    #
+    lodash/chaining:
+      - error
+      - always
+      - 1
+
+
+    #
     # Enforce consistent function composition
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/consistent-compose.md
     #
@@ -231,24 +240,24 @@ rules:
 
 
     #
-    # [DISABLED] Prefer lodash chains over native chains
+    # Prefer lodash chains over native chains
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-lodash-chain.md
     #
-    lodash/prefer-lodash-chain: off
+    lodash/prefer-lodash-chain: error
 
 
     #
-    # [DISABLED] Prefer lodash methods over native
+    # Prefer lodash methods over native
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-lodash-method.md
     #
-    lodash/prefer-lodash-method: off
+    lodash/prefer-lodash-method: error
 
 
     #
-    # [DISABLED] Prefer lodash type check
+    # Prefer lodash type check
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-lodash-typecheck.md
     #
-    lodash/prefer-lodash-typecheck: off
+    lodash/prefer-lodash-typecheck: error
 
 
     #
@@ -262,7 +271,7 @@ rules:
     # Prefer _.noop() over empty functions
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-noop.md
     #
-    lodash/prefer-noop: off
+    lodash/prefer-noop: error
 
 
     #
@@ -270,6 +279,12 @@ rules:
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-over-quantifier.md
     #
     lodash/prefer-over-quantifier: error
+
+
+    #
+    # Prefer using _.some over comparing findIndex to -1.
+    #
+    lodash/prefer-some: error
 
 
     #
