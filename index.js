@@ -10,6 +10,7 @@ exports.extends = [
   './base',
   './react',
   './lodash',
+  './promise',
   './ava'
 
 ].map(require.resolve);

@@ -1,0 +1,18 @@
+#
+# promise.yml
+#
+# @author  Hao Chen <a@ricepo.com>
+# @license 2015-16 (C) Ricepo LLC. All Rights Reserved.
+#
+---
+plugins:
+  - promise
+
+
+rules:
+
+
+    #
+    # Prefer await to then() for reading Promise values
+    #
+    promise/prefer-await-to-then: error
