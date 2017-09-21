@@ -62,7 +62,7 @@ rules:
     camelcase:
       - error
       -
-        properties: always
+        properties: never
 
 
     #
