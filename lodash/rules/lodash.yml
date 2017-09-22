@@ -115,28 +115,12 @@ rules:
 
 
     #
-    # Disallow chaining with only single method
-    # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/no-single-chain.md
-    #
-    lodash/no-single-chain: error
-
-
-    #
     # Enforce _.get/_.set path styles
     # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/path-style.md
     #
     lodash/path-style:
       - warn
       - string
-
-
-    #
-    # Prefer lodash chains whenever possible
-    # https://github.com/wix/eslint-plugin-lodash/blob/master/docs/rules/prefer-chain.md
-    #
-    lodash/prefer-chain:
-      - error
-      - 2
 
 
     #
