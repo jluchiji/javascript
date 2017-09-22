@@ -68,7 +68,7 @@ rules:
     lodash/chaining:
       - error
       - always
-      - 1
+      - 2
 
 
     #
