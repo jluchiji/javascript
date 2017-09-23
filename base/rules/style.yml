@@ -31,11 +31,7 @@ rules:
     #
     #  enforce line breaks between array elements
     #
-    array-element-newline:
-      - error
-      -
-        multiline: true
-        minItems:  4
+    array-element-newline: off
 
 
     #
