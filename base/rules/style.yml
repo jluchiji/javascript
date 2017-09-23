@@ -35,6 +35,7 @@ rules:
       - error
       -
         multiline: true
+        minItems:  4
 
 
     #
