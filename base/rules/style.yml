@@ -614,7 +614,8 @@ rules:
     #
     padded-blocks:
       - error
-      - always
+      -
+        classes: always
 
 
     #
