@@ -11,6 +11,7 @@ exports.extends = [
   './react',
   './lodash',
   './promise',
+  './hapi', // new line at the beginning of function 
   './ava'
 
 ].map(require.resolve);
