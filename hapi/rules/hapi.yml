@@ -23,7 +23,7 @@ rules:
     #
     # Enforces capitalization of imported module variables.
     #
-    hapi/hapi-scope-start: off
+    hapi/hapi-capitalize-modules: off
 
 
     #
