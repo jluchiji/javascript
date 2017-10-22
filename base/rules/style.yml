@@ -149,7 +149,7 @@ rules:
     #
     function-paren-newline:
       - error
-      - consistent
+      - multiline
 
 
     #
@@ -614,8 +614,7 @@ rules:
     #
     padded-blocks:
       - error
-      -
-        classes: always
+      - always
 
 
     #
@@ -624,20 +623,26 @@ rules:
     padding-line-between-statements:
       - error
 
-      # line before [return block]
+      # line before / after
+      # return, continue, block, export, expression
       -
         blankLine: always
         prev:      '*'
         next:
           -        return
+          -        continue
           -        block-like
+          -        expression
+          -        export
 
-      # line after [return block]
       -
         blankLine: always
         prev:
           -        return
+          -        continue
           -        block-like
+          -        expression
+          -        export
         next:      '*'
 
       # line before / after [const let var]
@@ -729,7 +734,7 @@ rules:
           FunctionDeclaration:     true
           MethodDefinition:        true
           ArrowFunctionExpression: true
-          ClassDeclaration:        false
+          ClassDeclaration:        true
 
 
 
