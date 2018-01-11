@@ -362,7 +362,7 @@ rules:
     #
     #  restrict what can be thrown as an exception
     #
-    no-throw-literal: error
+    no-throw-literal: off
 
 
     #
