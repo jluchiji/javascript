@@ -457,6 +457,7 @@ rules:
     #
     'react/default-props-match-prop-types': ['error', { allowRequiredDefaults: false }]
 
+
     #
     # Prevent unused state values
     # https://github.com/yannickcr/eslint-plugin-react/pull/1103/
